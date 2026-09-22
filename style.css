@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0d0b12;
+    color: white;
+}
+
+/* MENU */
+
+header {
+    background-color: #0b0910;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #292033;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu h1 {
+    color: #c084fc;
+    font-size: 24px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c084fc;
+}
+
+/* CAPA */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13, 11, 18, 0.95),
+            rgba(13, 11, 18, 0.55),
+            rgba(13, 11, 18, 0.95)
+        ),
+        url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.destaque {
+    color: #c084fc;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero p:not(.destaque) {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #9333ea;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #7e22ce;
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+.secao {
+    padding: 90px 10%;
+}
+
+.secao h2,
+.curiosidades h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: #c084fc;
+}
+
+/* SOBRE */
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.imagem {
+    flex: 1;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.texto {
+    flex: 1;
+}
+
+.texto p {
+    color: #d1d1d1;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+
+.musicas {
+    background-color: #15111d;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: #211a2b;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #332744;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #9333ea;
+}
+
+.icone {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* CARREIRA */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.evento {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #17131e;
+    border-left: 4px solid #9333ea;
+    border-radius: 10px;
+}
+
+.evento span {
+    color: #c084fc;
+    font-weight: bold;
+    font-size: 20px;
+    min-width: 70px;
+}
+
+.evento h3 {
+    margin-bottom: 10px;
+}
+
+.evento p {
+    color: #bbb;
+    line-height: 1.5;
+}
+
+/* CURIOSIDADES */
+
+.curiosidades {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #251036, #0d0b12);
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.numeros div {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+.numeros strong {
+    font-size: 40px;
+}
+
+.numeros p {
+    margin-top: 15px;
+    color: #ddd;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #08070b;
+    color: #999;
+}
+
+footer h3 {
+    color: #c084fc;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .numeros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .evento {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
